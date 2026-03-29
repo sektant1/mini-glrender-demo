@@ -2,7 +2,8 @@ cmake_minimum_required(VERSION 3.30)
 
 project(mini-render-lab VERSION 1.0)
 
-set(CMAKE_C_STANDARD 17) 
+set(CMAKE_C_STANDARD 17)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 set(BUILD_UTILS OFF CACHE BOOL "utilities" FORCE)
@@ -26,7 +27,6 @@ include_directories(vendor/glfw/include)
 include_directories(vendor/glew/include)
 
 set_property(TARGET glew_s PROPERTY FOLDER GLEW)
-set_property(TARGET glew   PROPERTY FOLDER GLEW)
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
